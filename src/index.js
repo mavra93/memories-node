@@ -18,5 +18,4 @@ const cronJob = cron.job('0 * * * *', function () {
     console.log("cron job enter", "now:", now);
     listenForNotificationRequests(now);
 });
-
 cronJob.start();
