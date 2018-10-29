@@ -1,0 +1,30 @@
+{
+  "name": "memories-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-env": "^1.7.0",
+    "cron": "^1.4.1",
+    "express": "^4.16.4",
+    "fcm-node": "^1.3.0",
+    "firebase": "^5.5.6",
+    "firebase-admin": "^6.1.0",
+    "heroku-self-ping": "^1.1.5",
+    "moment": "^2.22.2",
+    "q": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
