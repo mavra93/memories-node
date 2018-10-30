@@ -1,9 +1,10 @@
 import express from 'express';
 import cron from 'cron';
 import moment from 'moment';
+import {config} from './config/config';
 import {listenForNotificationRequests} from './listenForNotificationRequests';
 
-require('heroku-self-ping')("https://mi-node-app.herokuapp.com/");
+require('heroku-self-ping')(config.herokuUrl);
 
 let app = express();
 
